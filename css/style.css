@@ -1,3 +1,10 @@
+:root {
+    --arrow-bg: rgb(255, 255, 255);
+    --arrow-icon: url(../image/caret-down-solid.svg);
+    --option-bg: white, 1px solid;
+    --select-bg: rgb(255, 255, 255);
+  }
+
 body {
     padding: 0 25px;
 }
@@ -42,6 +49,7 @@ body {
 
 .sub-title  h4{
     font-weight: normal;
+    font-size: 1.2em;
 }
 
 .content {
@@ -99,15 +107,56 @@ label {
 
 input {
     margin-bottom: 10px;
-    padding: 10px 5px;
+    padding: 10px;
     border-radius: 6px;
+    border: 2px solid gray;
 }
 
 select {
-    padding: 10px 5px;
-    border-radius: 6px;
-    margin-bottom: 20px;
     cursor: pointer;
+    margin-bottom: 20px;
+    /* reset */
+    appearance: none;
+    border: 2px solid gray;
+    outline: 0;
+    font: inherit;
+    /* personalize */
+    padding: 10px;
+    background: var(--arrow-icon) no-repeat right 0.8em center / .8em, /* Ubah nilai ukuran dan posisi di sini */
+        linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    color: #757575;
+    border-radius: 6px;
+    cursor: pointer;
+    /* Remove IE arrow */
+    &::-ms-expand {
+        display: none;
+    }
+    /* Remove focus outline */
+    &:focus {
+        text-decoration-color: black;
+    }
+}
+
+select::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0.5em; /* Sesuaikan posisi border */
+    bottom: 0;
+    width: 2px; /* Lebar border */
+    background-color: gray; /* Warna border abu-abu */
+}
+
+#interest option:disabled {
+    color: gray;
+}
+
+#interest option:enabled {
+    color: black;
+}
+
+#interest option:checked {
+    color: black; /* Mengubah warna teks menjadi hitam */
 }
 
 .button {
@@ -134,9 +183,14 @@ select {
     gap: 30px;
     left: 50px;
     position: relative;
-    margin-top: 50px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #EEF0F4;
+    padding: 30px 0;
+}
+
+.customer-profile__line {
+    margin: 0 auto;
+    background-color: #EEF0F4;
+    width: 150px;
+    height: 5px;
 }
 
 .customer-profile__img {

@@ -5,7 +5,7 @@ body {
 .navigation {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
+    padding: 20px 0;
     border-bottom: 1px solid grey;
 }
 
@@ -70,6 +70,7 @@ body {
 
 .content-image p {
     color: gray;
+    font-size: 1.5em;
 }
 
 .content-right {
@@ -82,20 +83,31 @@ body {
     display: flex;
     flex-direction: column ;
     width: 100%;
-    padding: 20px;
-    background-color : rgb(235, 235, 235) ;
+    padding: 30px 50px;
+    background-color : #EEF0F4 ;
     border-radius: 6px;
+    height: 450px;
+}
+
+.contact-form p {
+    color: gray;
+}
+
+label {
+    padding: 5px 0;
 }
 
 input {
     margin-bottom: 10px;
-    padding: 8px 2px;
+    padding: 10px 5px;
     border-radius: 6px;
 }
 
 select {
-    padding: 8px 2px;
+    padding: 10px 5px;
     border-radius: 6px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .button {
@@ -103,11 +115,12 @@ select {
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    background: darkslategray;
+    background: #29323D;
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     margin-top: 10px;
     border-radius: 6px;
+    font-size: 1.2em;
 }
 
 .button:hover {
@@ -115,11 +128,57 @@ select {
     color: grey;
 }
 
+.customer-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    left: 50px;
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EEF0F4;
+}
+
+.customer-profile__img {
+    display: flex;
+    align-items: center;
+}
+
+.customer-profile__img img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nama-customer {
+    line-height: .2em;
+}
+
+.attribute-customer {
+    color: gray;
+}
+
 .circle {
-    background: lightgray;
+    background: #EEF0F4;
     border-radius: 50%;
-    border-radius: 50%;
-    width: 1.2em;
+    height: 2em;
+    width: 2em;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.daftar-layanan {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.daftar-layanan p {
+    font-size: 1.5em;
+}
+
+.deskripsi-layanan {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 40px 0;
 }

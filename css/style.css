@@ -191,6 +191,7 @@ select::after {
     background-color: #EEF0F4;
     width: 150px;
     height: 5px;
+    border-radius: 1%;
 }
 
 .customer-profile__img {
